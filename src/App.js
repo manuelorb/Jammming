@@ -213,11 +213,10 @@ function App() {
                   startNewPlaylist={startNewPlaylist} />
               </div>
             </div>
-            <div className="userPlaylists">
-              <UserPlaylists 
-                playlists={userPlaylists}
-                onPlaylistClick={handlePlaylistClick} />
-            </div>
+            <UserPlaylists 
+              playlists={userPlaylists}
+              onPlaylistClick={handlePlaylistClick} 
+            />
           </>
         )}
       </main>

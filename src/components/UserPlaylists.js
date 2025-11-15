@@ -9,7 +9,7 @@ function UserPlaylists({ playlists , onPlaylistClick }) {
             <div className="userPlaylistsContainer">
                 {playlists.length > 0 ? (
                     playlists.map((playlist) => (
-                        <div key={playlist.id} className="inline" onClick={() => onPlaylistClick(playlist)} >
+                        <div key={playlist.id} className="playlist" onClick={() => onPlaylistClick(playlist)} >
                             {playlist.images.length > 0 ? (
                                 <img 
                                     src={playlist.images[0].url}

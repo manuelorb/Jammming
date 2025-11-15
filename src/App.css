@@ -5,7 +5,7 @@
 
 
 html {
-  background-image: url('./components/images/pexels-anniroenkae-2832382.jpg');
+  background: linear-gradient(45deg, rgba(75, 4, 75, 1) 0%, rgba(186, 76, 186, 1) 50%, rgba(26, 18, 181, 1) 100%);
   color: #fff;
 }
 
@@ -23,7 +23,7 @@ html {
 #boxGrid {
   margin: 20px;
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 1fr 1fr;
   column-gap: 20px;
 }
 
@@ -31,17 +31,30 @@ html {
   background-color: rgb(75, 4, 75, 0.9);
   padding: 15px;
   min-height: 100vh;
+  border-radius: 10px;
 }
 
-.userPlaylists {
-  margin: 20px;
-  background-color: rgb(75, 4, 75, 0.9);
-  padding: 15px;
+.playlist {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 250px;
+  padding: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.4);
+}
+
+.playlist:hover {
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .userPlaylistsContainer {
-  display: flex;
-  flex-wrap: wrap;
+  margin: 20px;
+  background-color: rgb(75, 4, 75, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  columns: 250px 3;
 }
 
 h2 {
@@ -63,38 +76,39 @@ h1 .purpleM {
 
 .track {
   width: 100%;
+  padding: 10px;
   border-bottom: 1px solid rgb(255, 255, 255, 0.4);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 62px;
+  gap: 10px;
+  height: 60px;
   overflow: hidden;
 }
 
 .inline {
-  width: 50%;
+  width: 100%;
   display: flex;
-  border-bottom: 1px solid rgb(255, 255, 255, 0.4);
+  gap: 10px;
 }
 
 .track img {
-  height: 52px;
-  width: auto;
-  padding: 5px;
-  margin-right: 5px;
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
   border-radius: 10px;
 }
 
 .track h3 {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  font-size: 16px;
   font-weight: 600;
+  margin: 0;
 }
 
 .track p {
   color: rgb(255, 255, 255, 0.9);
-  margin-top: 0;
-  margin-bottom: 5px;
+  font-size: 13px;
+  margin: 0;
 }
 
 .track .button {
@@ -107,15 +121,21 @@ h1 .purpleM {
   font-size: 20px;
   vertical-align: middle;
   font-weight: bolder;
-}
-
-.track .button p:hover {
   cursor: pointer;
 }
 
 form {
   display: flex;
   flex-direction: column;
+}
+
+.searchBar {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    background: #fff;
 }
 
 /* BUTTONS save to spoty and Search*/
@@ -170,14 +190,15 @@ button:focus {
   width: fit-content;
 }
 
-.userPlaylists img {
-  height: 62px;
-  width: auto;
-  padding: 5px;
-  margin-right: 5px;
+.playlists img {
+  height: 60px;
+  width: 60px;
   border-radius: 10px;
 }
 
-.userPlaylists :hover {
-  cursor: pointer;
+@media (max-width: 800px) {
+  #boxGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
