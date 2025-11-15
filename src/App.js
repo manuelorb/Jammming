@@ -184,11 +184,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Ja<span className="purpleM">mmm</span>ing</h1>
-        <SearchBar 
-          onSearch={handleSearch} />
-      </header>
-      <main>
-        {!accessToken ? (
+         {!accessToken ? (
           <div class="logIn-container">
             <button
               onClick={() => window.location.href = getSpotifyAuthUrl()}
@@ -196,6 +192,12 @@ function App() {
             >Log in to Spotify</button>
           </div>
         ) : (
+        <SearchBar 
+          onSearch={handleSearch} />
+        )}
+      </header>
+      <main>
+        {accessToken && (
           <>
             <div id="boxGrid">
               <div id="results">
