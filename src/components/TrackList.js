@@ -29,7 +29,7 @@ function TrackList({searchResults, addToPlaylist}) {
                     </div>
                 ))
             ) : (
-                <p>No tracks found.</p>
+                <p>Search for a song</p>
             )}
         </div>
     );

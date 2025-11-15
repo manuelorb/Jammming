@@ -35,7 +35,7 @@ function Playlist({playlistTracks, removeFromPlaylist, playlistName, setPlaylist
                     </div>
                 ))
             ) : (
-                    <p>No songs in playlist.</p>
+                    <p>Add songs...</p>
             )}
             {playlistTracks.length > 0 && <button onClick={saveToSpotify} disabled={playlistTracks.length === 0} >Save to Spotify</button>}
             {playlistName && <button onClick={startNewPlaylist} className="startNewPlaylist">Start new playlist</button>}

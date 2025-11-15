@@ -38,7 +38,7 @@ html {
   display: flex;
   align-items: center;
   gap: 10px;
-  width: 250px;
+  width: 300px;
   padding: 10px;
   cursor: pointer;
   overflow: hidden;
@@ -46,15 +46,16 @@ html {
 }
 
 .playlist:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .userPlaylistsContainer {
+  display: flex;
+  flex-wrap: wrap;
   margin: 20px;
-  background-color: rgb(75, 4, 75, 0.9);
   padding: 20px;
+  background-color: rgb(75, 4, 75, 0.9);
   border-radius: 10px;
-  columns: 250px 3;
 }
 
 h2 {
@@ -82,12 +83,11 @@ h1 .purpleM {
   flex-direction: row;
   justify-content: space-between;
   gap: 10px;
-  height: 60px;
+  height: 56px;
   overflow: hidden;
 }
 
 .inline {
-  width: 100%;
   display: flex;
   gap: 10px;
 }
